@@ -1,5 +1,5 @@
 import { NavBar, DatePicker } from 'antd-mobile'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import classNames from 'classnames'
 import dayjs from 'dayjs'
 import { useSelector } from 'react-redux'
@@ -35,12 +35,16 @@ const Month = () => {
     }
 
   }, [currentMonthBill])
+  // 初始化的时候把当前月份的账单更新
+  useEffect(() => {
+    const nowDate = dayjs(new Date()).format('YYYY-MM')
+    setCurrentMonthBill(monthGroup[nowDate] || [])  // 更新当前月份的账单
+  }, [monthGroup])
   // 选择时间后的回调函数
   const onConfirm = (date: Date) => {
     setShow(false)  // 关闭弹窗
     const formatDate = dayjs(date).format('YYYY-MM')
     setCurrentMonthBill(monthGroup[formatDate] || [])  // 更新当前月份的账单
-    console.log(monthResult);
     setDate(formatDate)  // 更新时间
   }
   return (
