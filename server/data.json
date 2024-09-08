@@ -3,58 +3,72 @@
         {
             "type": "pay",
             "money": -50,
-            "date": "2019-03-25T16:00:00.000Z",
+            "date": "2024-03-25T16:00:00.000Z",
             "useFor": "food",
             "id": 1
         },
         {
             "type": "pay",
             "money": -20,
-            "date": "2019-03-25T16:00:00.000Z",
+            "date": "2024-03-25T16:00:00.000Z",
             "useFor": "food",
             "id": 2
         },
         {
             "type": "pay",
             "money": -30,
-            "date": "2019-03-25T16:00:00.000Z",
+            "date": "2024-03-25T16:00:00.000Z",
             "useFor": "food",
             "id": 3
         },
         {
             "type": "pay",
             "money": -54,
-            "date": "2019-03-25T16:00:00.000Z",
+            "date": "2024-03-25T16:00:00.000Z",
             "useFor": "food",
             "id": 4
         },
         {
             "type": "pay",
             "money": -10,
-            "date": "2017-03-25T16:00:00.000Z",
+            "date": "2024-03-25T16:00:00.000Z",
             "useFor": "food",
             "id": 5
         },
         {
             "type": "pay",
             "money": -10,
-            "date": "2018-06-25T16:00:00.000Z",
+            "date": "2024-06-25T16:00:00.000Z",
             "useFor": "food",
             "id": 6
         },
         {
             "type": "pay",
             "money": -10,
-            "date": "2019-04-25T16:00:00.000Z",
+            "date": "2024-04-25T16:00:00.000Z",
             "useFor": "food",
             "id": 7
         },
         {
             "type": "pay",
             "money": -10,
-            "date": "2019-05-25T16:00:00.000Z",
+            "date": "2024-05-25T16:00:00.000Z",
             "useFor": "food",
             "id": 8
+        }, 
+        {
+            "type": "income",
+            "money": 400,
+            "date": "2024-07-25T16:00:00.000Z",
+            "useFor": "food",
+            "id": 9
+        },
+        {
+            "type": "income",
+            "money": 40,
+            "date": "2024-07-25T16:00:00.000Z",
+            "useFor": "food",
+            "id": 10
         }
     ]
 }
