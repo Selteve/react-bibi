@@ -8,6 +8,7 @@ import { RootState } from '@/store'
 
 import { Result } from '@/type'
 import './index.scss'
+import DailyBill from './components/Daybill'
 const Month = () => {
 
   // 按月分组数据
@@ -15,7 +16,6 @@ const Month = () => {
   const monthGroup = useMemo(() => { // 按月分组
     return lodash.groupBy(billList, (item: Result) => dayjs(item.date).format('YYYY-MM'))
   }, [billList])
-  // console.log(monthGroup);
   // 控制弹窗的显示状态
   const [show, setShow] = useState(false)
   // 当前月份支出数据
@@ -47,6 +47,15 @@ const Month = () => {
     setCurrentMonthBill(monthGroup[formatDate] || [])  // 更新当前月份的账单
     setDate(formatDate)  // 更新时间
   }
+  // 当前月按照日来分组
+  const dayGroup = useMemo(() => { // 按月分组
+    const groupDate = lodash.groupBy(currentMonthBill, (item: Result) => dayjs(item.date).format('YYYY-MM-DD'))
+    const keys = Object.keys(groupDate)
+    return {
+      groupDate,
+      keys
+    }
+  }, [currentMonthBill])
   return (
     <div className="monthlyBill">
       <NavBar className="nav" backArrow={false}>
@@ -89,6 +98,13 @@ const Month = () => {
             max={new Date()}
           />
         </div>
+
+        {/* 单日列表统计 */}
+        {
+          dayGroup.keys.map(key => {
+            return <DailyBill key={key} date={key} billList={dayGroup.groupDate[key]} />
+          })
+        }
 
       </div>
     </div >
