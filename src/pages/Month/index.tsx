@@ -39,6 +39,7 @@ const Month = () => {
   useEffect(() => {
     const nowDate = dayjs(new Date()).format('YYYY-MM')
     setCurrentMonthBill(monthGroup[nowDate] || [])  // 更新当前月份的账单
+    
   }, [monthGroup])
   // 选择时间后的回调函数
   const onConfirm = (date: Date) => {
@@ -50,12 +51,16 @@ const Month = () => {
   // 当前月按照日来分组
   const dayGroup = useMemo(() => { // 按月分组
     const groupDate = lodash.groupBy(currentMonthBill, (item: Result) => dayjs(item.date).format('YYYY-MM-DD'))
+    console.log(groupDate);
+    
     const keys = Object.keys(groupDate)
     return {
       groupDate,
       keys
     }
   }, [currentMonthBill])
+  // 对日期从大到小排序
+
   return (
     <div className="monthlyBill">
       <NavBar className="nav" backArrow={false}>
@@ -100,7 +105,7 @@ const Month = () => {
         </div>
 
         {/* 单日列表统计 */}
-        {
+        { 
           dayGroup.keys.map(key => {
             return <DailyBill key={key} date={key} billList={dayGroup.groupDate[key]} />
           })

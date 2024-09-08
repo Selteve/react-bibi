@@ -1,4 +1,4 @@
-import { Button, DatePicker, Input, NavBar } from 'antd-mobile'
+import { Button, DatePicker, Input, NavBar, Toast } from 'antd-mobile'
 import Icon from '@/components/Icon'
 import './index.scss'
 import classNames from 'classnames'
@@ -10,6 +10,7 @@ import { addBillList } from '@/store/modules/billStore'
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from '@/store'
 import dayjs from 'dayjs'
+
 
 const New = () => {
   const navigate = useNavigate()
@@ -32,8 +33,18 @@ const New = () => {
       date,
       useFor
     }
+    if (money === 0) {
+      Toast.show({
+        icon: 'error',
+        content: '金额不能为0',
+      })
+      return
+    }
     dispatch(addBillList(data))
-
+    Toast.show({
+      icon: 'success',
+      content: '保存成功',
+    })
   }
   // 存储选择的时间
   const [date, setDate] = useState(new Date().toString())

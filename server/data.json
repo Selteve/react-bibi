@@ -139,6 +139,34 @@
       "money": -20,
       "date": "Sun Sep 08 2024 14:37:55 GMT+0800 (中国标准时间)",
       "useFor": "travel"
+    },
+    {
+      "id": "dc63",
+      "type": "pay",
+      "money": 0,
+      "date": "Sun Sep 08 2024 15:22:57 GMT+0800 (中国标准时间)",
+      "useFor": ""
+    },
+    {
+      "id": "d87f",
+      "type": "pay",
+      "money": 0,
+      "date": "Sun Sep 08 2024 15:23:30 GMT+0800 (中国标准时间)",
+      "useFor": ""
+    },
+    {
+      "id": "5580",
+      "type": "pay",
+      "money": 0,
+      "date": "Sun Sep 08 2024 15:59:45 GMT+0800 (中国标准时间)",
+      "useFor": ""
+    },
+    {
+      "id": "3916",
+      "type": "pay",
+      "money": -9,
+      "date": "Sun Sep 08 2024 15:59:45 GMT+0800 (中国标准时间)",
+      "useFor": "game"
     }
   ]
 }
