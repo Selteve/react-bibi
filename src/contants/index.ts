@@ -1,18 +1,4 @@
-interface BillItem {
-    type: string;
-    name: string;
-}
-
-interface BillCategory {
-    type: string;
-    name: string;
-    list: BillItem[];
-}
-
-interface BillData {
-    pay: BillCategory[];
-    income: BillCategory[];
-}
+import { BillData } from '@/type'
 
 const billListData: BillData = {
     pay: [

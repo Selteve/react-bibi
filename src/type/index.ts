@@ -13,9 +13,29 @@ interface DailyBillProps {
 interface IconProps {
     type: string;
 }
+
+interface BillItem {
+    type: string;
+    name: string;
+}
+
+interface BillCategory {
+    type: string;
+    name: string;
+    list: BillItem[];
+}
+
+interface BillData {
+    [key: string]: BillCategory[];
+    pay: BillCategory[];
+    income: BillCategory[];
+}
 export type {
     Result,
     DailyBillProps,
-    IconProps
+    IconProps,
+    BillItem,
+    BillCategory,
+    BillData
 };
 
