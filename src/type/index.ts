@@ -10,8 +10,12 @@ interface DailyBillProps {
     billList: Result[];
 }
 
+interface IconProps {
+    type: string;
+}
 export type {
     Result,
-    DailyBillProps
+    DailyBillProps,
+    IconProps
 };
 

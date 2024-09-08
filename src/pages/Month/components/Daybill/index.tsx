@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import React, { useMemo } from 'react'
 import { billTypeToName } from '@/contants'
 import { DailyBillProps } from '@/type'
+import Icon from '@/components/Icon'
 import './index.scss'
 
 
@@ -47,7 +48,7 @@ const DailyBill: React.FC<DailyBillProps> = ({ date, billList}) => {
           return (
             <div className="bill" key={item.id}>
               {/* 图标 */}
-              {/* <Icon type={item.useFor} /> */}
+              <Icon type={item.useFor} />
               <div className="detail">
                 <div className="billType">{billTypeToName[item.useFor]}</div>
               </div>
