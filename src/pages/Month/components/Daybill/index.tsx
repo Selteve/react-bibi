@@ -1,15 +1,12 @@
 import classNames from 'classnames'
 import React, { useMemo } from 'react'
 import { billTypeToName } from '@/contants'
-import { Result } from '@/type'
+import { DailyBillProps } from '@/type'
 import './index.scss'
 
-interface DailyBillProps {
-    date: string;
-    billList: Result[];
-  }
 
 const DailyBill: React.FC<DailyBillProps> = ({ date, billList}) => {
+    const [visible, setVisible] = React.useState(false)
   // 计算当前月份的账单
   const dayResult = useMemo(() => {
     // 支出 、 收入 、 结余
@@ -27,7 +24,7 @@ const DailyBill: React.FC<DailyBillProps> = ({ date, billList}) => {
         <div className="dateIcon">
           <span className="date">{date}</span>
           {/* expand 有这个类名 展开的箭头朝上的样子 */}
-          <span className={classNames('arrow')}></span>
+          <span className={classNames('arrow', visible && 'expand')} onClick={() => setVisible(!visible)}></span>
         </div>
         <div className="oneLineOverview">
           <div className="pay">
@@ -45,7 +42,7 @@ const DailyBill: React.FC<DailyBillProps> = ({ date, billList}) => {
         </div>
       </div>
       {/* 单日列表 */}
-      <div className="billList">
+      <div className="billList" style={{ display: visible ? 'block' : 'none'}}>
         {billList.map(item => {
           return (
             <div className="bill" key={item.id}>
