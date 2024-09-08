@@ -9,6 +9,7 @@ import { BillCategory, Data } from '@/type'
 import { addBillList } from '@/store/modules/billStore'
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from '@/store'
+import dayjs from 'dayjs'
 
 const New = () => {
   const navigate = useNavigate()
@@ -28,14 +29,20 @@ const New = () => {
     const data: Data = {
       type,
       money: type === 'pay' ? -money : +money,
-      date: new Date().toString(),
+      date,
       useFor
     }
     dispatch(addBillList(data))
 
   }
   // 存储选择的时间
-
+  const [date, setDate] = useState(new Date().toString())
+  const [dateVisible, setDateVisible] = useState(false)
+  const dateConfirm = (date: Date) => {
+    setDate(date.toString())
+    // 关闭时间选择器
+    setDateVisible(false)
+  }
   return (
     <div className="keepAccounts">
       <NavBar className="nav" onBack={() => navigate(-1)}>
@@ -65,12 +72,14 @@ const New = () => {
           <div className="kaForm">
             <div className="date">
               <Icon type="calendar" />
-              <span className="text">今天</span>
+              <span className="text" onClick={() => setDateVisible(true)}>{dayjs(date).format('YYYY-MM-DD')}</span>
               {/* 时间选择器 */}
               <DatePicker
                 className="kaDate"
                 title="记账日期"
                 max={new Date()}
+                visible={dateVisible}
+                onConfirm={dateConfirm}
               />
             </div>
             <div className="kaInput">
@@ -102,7 +111,7 @@ const New = () => {
                           className={
                             classNames(
                               'item',
-                              ''
+                              useFor === item.type ? 'selected' : ''
                             )
                           }
                           key={item.type}

@@ -43,7 +43,7 @@ const DailyBill: React.FC<DailyBillProps> = ({ date, billList}) => {
         </div>
       </div>
       {/* 单日列表 */}
-      <div className="billList" style={{ display: visible ? 'block' : 'none'}}>
+      <div className="billList" style={{ display: visible ? 'block' : 'none'}} key={123}>
         {billList.map(item => {
           return (
             <div className="bill" key={item.id}>
@@ -53,7 +53,7 @@ const DailyBill: React.FC<DailyBillProps> = ({ date, billList}) => {
                 <div className="billType">{billTypeToName[item.useFor]}</div>
               </div>
               <div className={classNames('money', item.type)}>
-                {item.money.toFixed(2)}
+                {item.money}
               </div>
             </div>
           )

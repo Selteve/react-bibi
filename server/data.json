@@ -104,6 +104,41 @@
       "money": -100,
       "date": "Sun Sep 08 2024 14:16:00 GMT+0800 (中国标准时间)",
       "useFor": "travel"
+    },
+    {
+      "id": "3c52",
+      "type": "income",
+      "money": 32,
+      "date": "Sun Sep 08 2024 00:00:00 GMT+0800 (中国标准时间)",
+      "useFor": "salary"
+    },
+    {
+      "id": "7b7f",
+      "type": "income",
+      "money": 32,
+      "date": "Sun Sep 08 2024 00:00:00 GMT+0800 (中国标准时间)",
+      "useFor": "salary"
+    },
+    {
+      "id": "020f",
+      "type": "pay",
+      "money": -12,
+      "date": "Sun Sep 08 2024 14:32:01 GMT+0800 (中国标准时间)",
+      "useFor": "dessert"
+    },
+    {
+      "id": "8ca9",
+      "type": "pay",
+      "money": -2,
+      "date": "Sun Sep 08 2024 14:36:05 GMT+0800 (中国标准时间)",
+      "useFor": "audio"
+    },
+    {
+      "id": "99be",
+      "type": "pay",
+      "money": -20,
+      "date": "Sun Sep 08 2024 14:37:55 GMT+0800 (中国标准时间)",
+      "useFor": "travel"
     }
   ]
 }
