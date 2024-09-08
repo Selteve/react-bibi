@@ -1,102 +1,109 @@
 {
-  "ka":  [
-        {
-            "type": "pay",
-            "money": -50,
-            "date": "2024-03-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 1
-        },
-        {
-            "type": "pay",
-            "money": -20,
-            "date": "2024-03-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 2
-        },
-        {
-            "type": "pay",
-            "money": -30,
-            "date": "2024-03-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 3
-        },
-        {
-            "type": "pay",
-            "money": -54,
-            "date": "2024-03-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 4
-        },
-        {
-            "type": "pay",
-            "money": -10,
-            "date": "2024-03-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 5
-        },
-        {
-            "type": "pay",
-            "money": -10,
-            "date": "2024-06-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 6
-        },
-        {
-            "type": "pay",
-            "money": -10,
-            "date": "2024-04-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 7
-        },
-        {
-            "type": "pay",
-            "money": -10,
-            "date": "2024-05-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 8
-        }, 
-        {
-            "type": "income",
-            "money": 400,
-            "date": "2024-07-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 9
-        },
-        {
-            "type": "income",
-            "money": 40,
-            "date": "2024-07-25T16:00:00.000Z",
-            "useFor": "food",
-            "id": 10
-        },
-        {
-            "type": "income",
-            "money": 40,
-            "date": "2024-09-08T16:00:00.000Z",
-            "useFor": "food",
-            "id": 11
-        },
-        {
-            "type": "income",
-            "money": 60,
-            "date": "2024-09-08T16:00:00.000Z",
-            "useFor": "food",
-            "id": 12
-        },
-        {
-            "type": "pay",
-            "money": -67,
-            "date": "2024-09-08T16:00:00.000Z",
-            "useFor": "food",
-            "id": 13
-        }, 
-        {
-            "type": "pay",
-            "money": -90,
-            "date": "2024-09-09T16:00:00.000Z",
-            "useFor": "food",
-            "id": 14
-        }
-    ]
+  "ka": [
+    {
+      "type": "pay",
+      "money": -50,
+      "date": "2024-03-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "1"
+    },
+    {
+      "type": "pay",
+      "money": -20,
+      "date": "2024-03-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "2"
+    },
+    {
+      "type": "pay",
+      "money": -30,
+      "date": "2024-03-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "3"
+    },
+    {
+      "type": "pay",
+      "money": -54,
+      "date": "2024-03-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "4"
+    },
+    {
+      "type": "pay",
+      "money": -10,
+      "date": "2024-03-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "5"
+    },
+    {
+      "type": "pay",
+      "money": -10,
+      "date": "2024-06-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "6"
+    },
+    {
+      "type": "pay",
+      "money": -10,
+      "date": "2024-04-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "7"
+    },
+    {
+      "type": "pay",
+      "money": -10,
+      "date": "2024-05-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "8"
+    },
+    {
+      "type": "income",
+      "money": 400,
+      "date": "2024-07-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "9"
+    },
+    {
+      "type": "income",
+      "money": 40,
+      "date": "2024-07-25T16:00:00.000Z",
+      "useFor": "food",
+      "id": "10"
+    },
+    {
+      "type": "income",
+      "money": 40,
+      "date": "2024-09-08T16:00:00.000Z",
+      "useFor": "food",
+      "id": "11"
+    },
+    {
+      "type": "income",
+      "money": 60,
+      "date": "2024-09-08T16:00:00.000Z",
+      "useFor": "food",
+      "id": "12"
+    },
+    {
+      "type": "pay",
+      "money": -67,
+      "date": "2024-09-08T16:00:00.000Z",
+      "useFor": "food",
+      "id": "13"
+    },
+    {
+      "type": "pay",
+      "money": -90,
+      "date": "2024-09-09T16:00:00.000Z",
+      "useFor": "food",
+      "id": "14"
+    },
+    {
+      "id": "4117",
+      "type": "pay",
+      "money": -100,
+      "date": "Sun Sep 08 2024 14:16:00 GMT+0800 (中国标准时间)",
+      "useFor": "travel"
+    }
+  ]
 }

@@ -5,6 +5,12 @@ interface Result {
     useFor: string,
     id: number
 }
+interface Data {
+    type: string,
+    money: number,
+    date: string,
+    useFor: string,
+}
 interface DailyBillProps {
     date: string;
     billList: Result[];
@@ -36,6 +42,7 @@ export type {
     IconProps,
     BillItem,
     BillCategory,
-    BillData
+    BillData,
+    Data
 };
 
